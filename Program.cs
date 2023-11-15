@@ -4,17 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ispitPrvi
+namespace IspitCetvrti
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Upisite jednu recenicu");
-            string niz = Console.ReadLine();
-            Console.WriteLine(niz.Replace(" ", "_"));
+            Console.WriteLine("Upisite prvu rijec");
+            string prvi = Console.ReadLine();
+            Console.WriteLine("Upisite drugu rijec");
+            string drugi = Console.ReadLine();
+            char[] abeceda = prvi.ToCharArray();
+            Array.Sort(abeceda);
+            Console.WriteLine(abeceda);
+            char[] abeceda2 = drugi.ToCharArray();
+            Array.Sort(abeceda2);
+            Console.WriteLine(abeceda2);
+
             Console.ReadKey();
+       
 
         }
     }
